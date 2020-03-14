@@ -2,7 +2,7 @@
 
 <resources>
 <string name="appName">Melikeey</string>
-    <string name="artist">Artist</string>
-    <string name="album">Album</string>
+    <string name="artist">Artists</string>
+    <string name="album">Albums</string>
     <string name="tracks">Tracks</string>
 </resources>
