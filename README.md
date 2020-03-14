@@ -6,5 +6,6 @@ This repository contains a detailed music app that implements MVP architecture i
 
 ## Design
 
-  <img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss1.png" width="200" alt="image" style="margin:5px"/><img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss2.png" width="200" alt="image"/><img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss3.png" width="200" alt="image"/>
+  
+ <img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss1.png" width="200" alt="image"/><img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss2.png" width="200" alt="image"/><img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss3.png" width="200" alt="image"/>
 
