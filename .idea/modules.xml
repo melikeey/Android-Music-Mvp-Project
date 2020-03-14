@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="melikeey_music/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/melikeey_music.iml" filepath="$PROJECT_DIR$/.idea/melikeey_music.iml" group="melikeey_music" />
+      <module fileurl="file://$PROJECT_DIR$/musiccomponent/musiccomponent.iml" filepath="$PROJECT_DIR$/musiccomponent/musiccomponent.iml" group="melikeey_music/musiccomponent" />
+    </modules>
+  </component>
+</project>

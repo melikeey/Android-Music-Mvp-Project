@@ -1,0 +1,14 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.melikeey.ui.album.AlbumFragment" />
+    </data>
+
+    <com.musiccomponent.view.MusicAlbumView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:id="@+id/mav"
+        android:layout_height="wrap_content"/>
+</layout>

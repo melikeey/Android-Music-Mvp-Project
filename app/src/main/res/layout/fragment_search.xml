@@ -1,0 +1,44 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.melikeey.ui.search.SearchFragment" />
+    </data>
+
+    <RelativeLayout
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            app:searchIcon="@drawable/ic_search_black_24dp"
+            app:closeIcon="@drawable/ic_close_black_24dp"
+            android:layout_width="match_parent"
+            android:elevation="2dp"
+
+            android:layout_margin="@dimen/dp_10"
+            android:layoutDirection="rtl"
+            android:background="#fff"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_header"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_32"
+            android:textStyle="bold"
+            android:layout_below="@+id/searchView"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_below="@id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</layout>
