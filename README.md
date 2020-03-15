@@ -20,5 +20,5 @@ This repository contains a music app that implements MVP architecture
  
  ## Structure
  
- Project have two module which are app and musiccomponent
+The project have two modules which are app and musiccomponent
 
