@@ -1,11 +1,10 @@
-# Android Music App with Kotlin/Java MVP Architecture
+# Android Music App with  MVP Architecture
 
 This repository contains a music app that implements MVP architecture
  
 
 ## Design
 
-  
  <img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss1.png" width="200" alt="image"/><img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss2.png" width="200" alt="image"/><img src="https://github.com/melikeey/Music-Melikeey/blob/master/ss/ss3.png" width="200" alt="image"/>
 
 
@@ -15,7 +14,7 @@ This repository contains a music app that implements MVP architecture
  
  ## Unit Test
  
- Robolectric , Mockito - Java
+ Robolectric, Mockito, Java
  
  
  ## Structure
