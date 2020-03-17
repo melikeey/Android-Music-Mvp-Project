@@ -5,10 +5,6 @@ import com.melikeey.ui.album.AlbumAdapter
 import com.melikeey.ui.album.AlbumMvpPresenter
 import com.melikeey.ui.album.AlbumMvpView
 import com.melikeey.ui.album.AlbumPresenter
-import com.melikeey.ui.player.PlayAdapter
-import com.melikeey.ui.player.PlayMvpPresenter
-import com.melikeey.ui.player.PlayMvpView
-import com.melikeey.ui.player.PlayPresenter
 import com.melikeey.ui.search.SearchAdapter
 import com.melikeey.ui.search.SearchMvpPresenter
 import com.melikeey.ui.search.SearchMvpView
@@ -39,11 +35,6 @@ class ViewModule {
     }
 
     @Provides
-    fun providePlayMvpPresenter(presenter: PlayPresenter<PlayMvpView>): PlayMvpPresenter<PlayMvpView> {
-        return presenter
-    }
-
-    @Provides
     fun provideTrackAdapter(): TrackAdapter {
         return TrackAdapter()
     }
@@ -57,11 +48,5 @@ class ViewModule {
     @Provides
     fun provideSearchAdapter(): SearchAdapter {
         return SearchAdapter()
-    }
-
-
-    @Provides
-    fun providePlayAdapter(): PlayAdapter {
-        return PlayAdapter()
     }
 }

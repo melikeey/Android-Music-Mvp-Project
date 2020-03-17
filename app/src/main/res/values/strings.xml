@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-<string name="appName">Melikeey</string>
+<string name="appName">Likeey</string>
     <string name="artist">Artists</string>
     <string name="album">Albums</string>
     <string name="tracks">Tracks</string>
