@@ -8,4 +8,5 @@
     <string name="volume">Demo List</string>
     <string name="search_a_music">Search a Music</string>
     <string name="album_cover">album cover</string>
+    <string name="there_is_no_album">Sorry, No album :(</string>
 </resources>
