@@ -37,6 +37,7 @@
             android:layout_marginStart="@dimen/dp_20"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_14"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/dp_20" />
     </LinearLayout>
 </layout>

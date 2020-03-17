@@ -14,11 +14,10 @@ import com.squareup.picasso.Picasso;
 public class MusicAlbumView extends CardView {
 
     View rootView;
-    TextView tvName, tvSong;
-    ImageView ivPhoto;
+    TextView tvArtist, tvSong;
+    ImageView ivAlbum;
 
-    String name, song;
-
+    String artistName, songName;
     String photo;
 
     public MusicAlbumView(Context context) {
@@ -43,29 +42,27 @@ public class MusicAlbumView extends CardView {
 
         rootView = inflate(context, R.layout.music_album_item, this);
 
-        tvName = rootView.findViewById(R.id.tv_name);
+        tvArtist = rootView.findViewById(R.id.tv_name);
         tvSong = rootView.findViewById(R.id.tv_song);
-        ivPhoto = rootView.findViewById(R.id.tv_photo);
+        ivAlbum = rootView.findViewById(R.id.tv_photo);
     }
 
     public void setAlbumView(String name, String song, String photo) {
 
-        this.name = name;
-        this.song = song;
+        this.artistName = name;
+        this.songName = song;
         this.photo = photo;
 
         setAlbumText();
     }
 
-
     private void setAlbumText() {
 
-
-        tvName.setText(name);
-        tvSong.setText(song);
+        tvArtist.setText(artistName);
+        tvSong.setText(songName);
 
         if (photo != null) {
-            Picasso.get().load(photo).into(ivPhoto);
+            Picasso.get().load(photo).into(ivAlbum);
 
         }
     }

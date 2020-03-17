@@ -7,6 +7,7 @@ import com.melikeey.di.module.NetworkModule
 import com.melikeey.di.module.ViewModule
 import com.melikeey.ui.album.AlbumFragment
 import com.melikeey.ui.main.MainActivity
+import com.melikeey.ui.player.PlayFragment
 import com.melikeey.ui.search.SearchFragment
 import com.melikeey.ui.track.TrackFragment
 import dagger.Component
@@ -23,5 +24,7 @@ interface ActivityComponent {
     fun inject(searchFragment: SearchFragment)
 
     fun inject(trackFragment: TrackFragment)
+
+    fun inject(playFragment: PlayFragment)
 
 }

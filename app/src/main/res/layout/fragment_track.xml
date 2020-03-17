@@ -14,7 +14,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_image"
             android:orientation="vertical">
 
             <ImageView
@@ -22,7 +21,8 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="@dimen/dp_20" />
+                android:layout_margin="@dimen/dp_20"
+                android:contentDescription="@string/album_cover" />
 
             <TextView
                 android:id="@+id/tv_album_name"
@@ -33,7 +33,8 @@
                 android:padding="@dimen/dp_5"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dp_20" />
 
 
             <TextView
@@ -45,7 +46,8 @@
                 android:padding="@dimen/dp_5"
                 android:textColor="#ccc"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dp_20" />
 
             <TextView
                 android:id="@+id/tv_track_name"
@@ -53,8 +55,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_artist_name"
                 android:layout_marginTop="@dimen/dp_20"
-                android:padding="20dp"
-                android:text="Volume"
+                android:padding="@dimen/dp_20"
+                android:text="@string/volume"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

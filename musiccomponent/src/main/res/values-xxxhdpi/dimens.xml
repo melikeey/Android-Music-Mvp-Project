@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="qr_width">280dp</dimen>
-
-    <dimen name="scallop_position">12.66</dimen>
-    <dimen name="scallop_radius">16dp</dimen>
-</resources>

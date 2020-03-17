@@ -1,4 +1,4 @@
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
     <data>
 
@@ -14,7 +14,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:background="#161616"
+            android:background="@color/background_black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -22,18 +22,17 @@
             android:id="@+id/fl_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/ll_bnv_container"
+            android:layout_above="@+id/ll_container"
             android:layout_below="@+id/toolbar"
             android:animateLayoutChanges="true"
-            android:background="#161616" />
+            android:background="@color/background_black" />
 
         <LinearLayout
-            android:id="@+id/ll_bnv_container"
+            android:id="@+id/ll_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="vertical">
-
         </LinearLayout>
     </RelativeLayout>
 </layout>

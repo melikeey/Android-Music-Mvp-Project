@@ -1,5 +1,6 @@
 package com.melikeey.ui.search
 
+import android.util.Log
 import com.melikeey.base.BaseNavigator
 import com.melikeey.base.BasePresenter
 import com.melikeey.model.Data
@@ -10,7 +11,8 @@ import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
 class SearchPresenter<V : SearchMvpView?>
-@Inject internal constructor(apiService: MusicApiService?, schedulerProvider: SchedulerProvider?, compositeDisposable: CompositeDisposable?, navigator: BaseNavigator?) : BasePresenter<V>(apiService, schedulerProvider, compositeDisposable, navigator), SearchMvpPresenter<V> {
+
+@Inject constructor(apiService: MusicApiService?, schedulerProvider: SchedulerProvider?, compositeDisposable: CompositeDisposable?, navigator: BaseNavigator?) : BasePresenter<V>(apiService, schedulerProvider, compositeDisposable, navigator), SearchMvpPresenter<V> {
 
     lateinit var searchList: MutableList<Data>
 
@@ -27,6 +29,7 @@ class SearchPresenter<V : SearchMvpView?>
                 if (!mvpView!!.isNetworkConnected()) {
                     mvpView!!.showMessage("Network Problem")
                 } else {
+                    Log.e("hata",throwable.message)
                     mvpView!!.showMessage("Error")
                 }
             }

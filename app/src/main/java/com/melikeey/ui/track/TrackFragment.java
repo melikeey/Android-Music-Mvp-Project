@@ -95,6 +95,7 @@ public class TrackFragment extends BaseFragment implements TrackMvpView {
 
         trackAdapter.addTrackList(trackList);
         trackAdapter.notifyDataSetChanged();
+        trackAdapter.setFragment(this);
 
         setUpRecyclerView();
     }

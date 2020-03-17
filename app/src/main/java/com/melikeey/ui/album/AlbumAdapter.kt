@@ -42,7 +42,8 @@ class AlbumAdapter : RecyclerView.Adapter<BaseViewHolder>() {
         return albumList!!.size
     }
 
-    inner class BodyViewHolder internal constructor(var mBinding: ItemAlbumBinding) : BaseViewHolder(mBinding.root) {
+    inner class BodyViewHolder constructor(var mBinding: ItemAlbumBinding) : BaseViewHolder(mBinding.root) {
+
         override fun clear() {}
 
         override fun onBind(position: Int) {

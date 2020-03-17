@@ -11,7 +11,7 @@ import org.robolectric.Robolectric;
 
 public abstract class BaseUnitTest {
 
-    AppCompatActivity activity;
+    private AppCompatActivity activity;
 
     protected AppCompatActivity startFragment(Fragment fragment) {
 
@@ -38,10 +38,5 @@ public abstract class BaseUnitTest {
         return "";
     }
 
-    protected AppCompatActivity getActivity() {
-        return activity;
-    }
-
-    protected abstract void setUpTest();
 }
 

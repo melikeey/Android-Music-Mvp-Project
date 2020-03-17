@@ -51,6 +51,6 @@ public class MusicAlbumViewTest {
 
         albumView.setAlbumView("Metallica", "Nothing else matter",null);
 
-        TestCase.assertEquals(albumView.tvName.getText(), "Metallica");
+        TestCase.assertEquals(albumView.tvArtist.getText(), "Metallica");
     }
 }

@@ -5,4 +5,7 @@
     <string name="artist">Artists</string>
     <string name="album">Albums</string>
     <string name="tracks">Tracks</string>
+    <string name="volume">Demo List</string>
+    <string name="search_a_music">Search a Music</string>
+    <string name="album_cover">album cover</string>
 </resources>

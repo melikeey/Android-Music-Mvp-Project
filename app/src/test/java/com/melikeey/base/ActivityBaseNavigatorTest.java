@@ -39,11 +39,6 @@ public class ActivityBaseNavigatorTest extends BaseUnitTest {
     }
 
     @Test
-    @Override
-    public void setUpTest() {
-    }
-
-    @Test
     public void activityIsFinishingTest() {
 
         baseNavigator.openActivity(TestActivity.class, true);

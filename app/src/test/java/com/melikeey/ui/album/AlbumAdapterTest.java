@@ -28,8 +28,6 @@ public class AlbumAdapterTest extends BaseUnitTest {
 
     private List<Data> albumList = new ArrayList<>();
 
-    private String TEST_ARTIST = "Metallica";
-
     @Before
     public void setUp() throws Exception {
 
@@ -37,8 +35,9 @@ public class AlbumAdapterTest extends BaseUnitTest {
 
         albumAdapter = new AlbumAdapter();
         setMockDataList();
-        albumAdapter.addAlbum(albumList,TEST_ARTIST);
 
+        String TEST_ARTIST = "Metallica";
+        albumAdapter.addAlbum(albumList, TEST_ARTIST);
     }
 
     @After
@@ -46,11 +45,6 @@ public class AlbumAdapterTest extends BaseUnitTest {
 
         albumAdapter = null;
         albumList = null;
-    }
-
-    @Test
-    @Override
-    public void setUpTest() {
     }
 
     @Test
@@ -64,11 +58,12 @@ public class AlbumAdapterTest extends BaseUnitTest {
     }
 
     private void setMockDataList() {
+
         String TEST_ID = "2114406";
         String TEST_TITLE = "Nothing Else Matter";
         String TEST_COVER_BIG = "https://e-cdns-images.dzcdn.net/images/cover/f1c31620f0e108b707ce1a1af0954158/500x500-000000-80-0-0.jpg\"";
 
-        Data data = new Data(TEST_ID, new Artist("","","",""), new Album("","","",""), TEST_TITLE, TEST_COVER_BIG);
+        Data data = new Data(TEST_ID, new Artist("","",""), new Album("","","",""), TEST_TITLE, TEST_COVER_BIG, "");
         albumList.add(data);
     }
 }

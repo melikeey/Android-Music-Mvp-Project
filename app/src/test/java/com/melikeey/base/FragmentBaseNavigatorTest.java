@@ -27,9 +27,6 @@ public class FragmentBaseNavigatorTest extends BaseUnitTest {
 
     private TestActivity activity;
 
-    @Mock
-    View view;
-
     @Before
     public void setUp() throws Exception{
 
@@ -43,13 +40,6 @@ public class FragmentBaseNavigatorTest extends BaseUnitTest {
     public void tearDown() throws Exception {
 
         baseNavigator = null;
-    }
-
-    @Test
-    @Override
-    public void setUpTest() {
-
-        testFragment.setUp(view);
     }
 
     @Test

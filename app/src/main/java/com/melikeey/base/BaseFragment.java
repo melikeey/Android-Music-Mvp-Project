@@ -86,7 +86,7 @@ public abstract class BaseFragment extends Fragment implements MvpView, ToolbarL
         }
     }
 
-    public ActivityComponent getActivityComponent() {
+    protected ActivityComponent getActivityComponent() {
         if (baseActivity != null) {
             return baseActivity.getActivityComponent();
         }
@@ -94,7 +94,7 @@ public abstract class BaseFragment extends Fragment implements MvpView, ToolbarL
         return null;
     }
 
-    public BaseActivity getBaseActivity() {
+    protected BaseActivity getBaseActivity() {
         return baseActivity;
     }
 
@@ -115,7 +115,7 @@ public abstract class BaseFragment extends Fragment implements MvpView, ToolbarL
         showToolbar();
 
         if (toolbar == null) {
-            toolbar = getActivity().findViewById(R.id.toolbar);
+            toolbar = getBaseActivity().findViewById(R.id.toolbar);
         }
 
         toolbar.setTitle(title);

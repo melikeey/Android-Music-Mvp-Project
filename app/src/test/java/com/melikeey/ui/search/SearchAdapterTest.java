@@ -32,9 +32,9 @@ public class SearchAdapterTest extends BaseUnitTest {
 
         MockitoAnnotations.initMocks(this);
 
-        setMockDataList();
-
         searchAdapter = new SearchAdapter();
+
+        setMockDataList();
 
         searchAdapter.addSearchResponseList(searchList);
     }
@@ -44,12 +44,6 @@ public class SearchAdapterTest extends BaseUnitTest {
 
         searchAdapter = null;
         searchList = null;
-    }
-
-    @Test
-    @Override
-    public void setUpTest() {
-
     }
 
     @Test
@@ -66,7 +60,7 @@ public class SearchAdapterTest extends BaseUnitTest {
         String TEST_TITLE = "Nothing Else Matter";
         String TEST_COVER_BIG = "https://e-cdns-images.dzcdn.net/images/cover/f1c31620f0e108b707ce1a1af0954158/500x500-000000-80-0-0.jpg\"";
 
-        searchList.add(new Data(TEST_ID, new Artist("","","",""), new Album("","","",""), TEST_TITLE, TEST_COVER_BIG));
+        searchList.add(new Data(TEST_ID, new Artist("","",""), new Album("","","",""), TEST_TITLE, TEST_COVER_BIG,""));
     }
 
 }

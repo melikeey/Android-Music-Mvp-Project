@@ -78,7 +78,8 @@ public class SearchFragment extends BaseFragment implements SearchMvpView {
 
     @Override
     protected void setUp(View view) {
-        mBinding.searchView.setQueryHint("");
+
+        mBinding.searchView.setQueryHint("Search");
 
         mBinding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -102,8 +103,13 @@ public class SearchFragment extends BaseFragment implements SearchMvpView {
     @Override
     public void setSearchResponse(List<Data> data) {
 
-        hideToolbar();
+        if (data.size() == 0) {
+            mBinding.tvTips.setVisibility(View.VISIBLE);
+        } else {
+            mBinding.tvTips.setVisibility(View.GONE);
+        }
 
+        hideToolbar();
         searchAdapter.addSearchResponseList(data);
         searchAdapter.notifyDataSetChanged();
 
@@ -112,6 +118,5 @@ public class SearchFragment extends BaseFragment implements SearchMvpView {
         setUpRecyclerView();
 
         mBinding.tvHeader.setText(getResources().getString(R.string.artist));
-
     }
 }

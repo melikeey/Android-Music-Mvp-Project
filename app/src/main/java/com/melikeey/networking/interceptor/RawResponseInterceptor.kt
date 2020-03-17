@@ -6,6 +6,7 @@ import java.io.IOException
 
 
 open class RawResponseInterceptor : Interceptor {
+
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
         val req = chain.request()

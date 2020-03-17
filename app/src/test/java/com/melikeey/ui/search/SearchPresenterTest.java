@@ -83,7 +83,7 @@ public class SearchPresenterTest {
         String TEST_TITLE = "Nothing Else Matter";
         String TEST_COVER_BIG = "https://e-cdns-images.dzcdn.net/images/cover/f1c31620f0e108b707ce1a1af0954158/500x500-000000-80-0-0.jpg\"";
 
-        Data data = new Data(TEST_ID, new Artist("","","",""), new Album("","","",""), TEST_TITLE, TEST_COVER_BIG);
+        Data data = new Data(TEST_ID, new Artist("","",""), new Album("","","",""), TEST_TITLE, TEST_COVER_BIG,"");
         searchList.add(data);
     }
 }

@@ -18,7 +18,6 @@ public class MusicApp extends Application {
                 .applicationModule(new ApplicationModule(this))
                 .build();
 
-
         mApplicationComponent.inject(this);
 
     }
@@ -30,5 +29,4 @@ public class MusicApp extends Application {
     public void setApplicationComponent(ApplicationComponent applicationComponent) {
         mApplicationComponent = applicationComponent;
     }
-
 }

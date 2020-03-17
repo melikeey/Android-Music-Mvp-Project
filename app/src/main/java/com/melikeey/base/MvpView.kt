@@ -6,7 +6,10 @@ package com.melikeey.base
  * that then usually will be implemented by an Activity or Fragment.
  */
 interface MvpView {
+
     fun restartApp()
+
     fun showMessage(message: String?)
+
     fun isNetworkConnected(): Boolean
 }

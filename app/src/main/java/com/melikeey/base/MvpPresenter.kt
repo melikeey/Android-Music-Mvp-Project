@@ -7,8 +7,11 @@ import androidx.annotation.IdRes
  * indicating the MvpView type that wants to be attached with.
  */
 interface MvpPresenter<V : MvpView?> : Navigation {
+
     fun onViewPrepared()
+
     fun onAttach(mvpView: V)
+
     fun onDetach()
 
     override fun openActivity(activity: Class<*>?, shouldFinishPrevious: Boolean)
