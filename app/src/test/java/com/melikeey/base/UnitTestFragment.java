@@ -12,14 +12,14 @@ import androidx.databinding.DataBindingUtil;
 import com.melikeey.R;
 import com.melikeey.databinding.FragmentAlbumBinding;
 
-public class TestFragmentFirst extends BaseFragment {
+public class UnitTestFragment extends BaseFragment {
 
-    static final String TAG = "TestFragmentFirst";
+    static final String TAG = "UnitTestFragment";
 
-    static TestFragmentFirst newInstance() {
+    static UnitTestFragment newInstance() {
 
         Bundle args = new Bundle();
-        TestFragmentFirst fragment = new TestFragmentFirst();
+        UnitTestFragment fragment = new UnitTestFragment();
         fragment.setArguments(args);
 
         return fragment;

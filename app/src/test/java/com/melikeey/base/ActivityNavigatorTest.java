@@ -15,11 +15,11 @@ import org.robolectric.annotation.Config;
 
 @Config(sdk = 28)
 @RunWith(RobolectricTestRunner.class)
-public class ActivityBaseNavigatorTest extends BaseUnitTest {
+public class ActivityNavigatorTest extends BaseUnitTest {
 
     private BaseNavigator baseNavigator;
 
-    private TestActivity activity;
+    private UnitTestActivity activity;
 
     @Before
     public void setUp() throws Exception{
@@ -41,7 +41,7 @@ public class ActivityBaseNavigatorTest extends BaseUnitTest {
     @Test
     public void activityIsFinishingTest() {
 
-        baseNavigator.openActivity(TestActivity.class, true);
+        baseNavigator.openActivity(UnitTestActivity.class, true);
         TestCase.assertTrue(activity.isFinishing());
     }
 
@@ -49,12 +49,12 @@ public class ActivityBaseNavigatorTest extends BaseUnitTest {
     @Test
     public void activityIsNotFinishingTest() {
 
-        baseNavigator.openActivity(TestActivity.class, false);
-        TestCase.assertTrue(!activity.isFinishing());
+        baseNavigator.openActivity(UnitTestActivity.class, false);
+        TestCase.assertFalse(activity.isFinishing());
     }
 
     public void startActivity(){
-        activity = Robolectric.buildActivity(TestActivity.class)
+        activity = Robolectric.buildActivity(UnitTestActivity.class)
                 .create()
                 .resume()
                 .get();

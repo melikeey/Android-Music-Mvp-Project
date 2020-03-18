@@ -5,17 +5,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.melikeey.base.TestActivity;
+import com.melikeey.base.UnitTestActivity;
 
 import org.robolectric.Robolectric;
 
 public abstract class BaseUnitTest {
 
-    private AppCompatActivity activity;
-
     protected AppCompatActivity startFragment(Fragment fragment) {
 
-        activity = Robolectric.buildActivity(TestActivity.class)
+        AppCompatActivity activity = Robolectric.buildActivity(UnitTestActivity.class)
                 .create()
                 .start()
                 .resume()

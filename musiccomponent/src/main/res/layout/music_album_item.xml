@@ -1,9 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#161616"
+    android:background="@color/background_black"
     android:padding="@dimen/dp_10">
 
     <androidx.cardview.widget.CardView
@@ -23,7 +24,8 @@
                 android:layout_width="wrap_content"
                 android:scaleType="fitXY"
                 android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_menu_always_landscape_portrait" />
+                android:src="@android:drawable/ic_menu_always_landscape_portrait"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tv_name"
@@ -33,7 +35,7 @@
                 android:ellipsize="end"
                 android:padding="@dimen/dp_4"
                 android:background="@color/background_black"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textSize="@dimen/sp_14"
                 android:textStyle="bold" />
 

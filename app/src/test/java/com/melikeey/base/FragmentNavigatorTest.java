@@ -1,7 +1,5 @@
 package com.melikeey.base;
 
-import android.view.View;
-
 import com.melikeey.ui.base.BaseUnitTest;
 
 import junit.framework.TestCase;
@@ -18,20 +16,20 @@ import org.robolectric.annotation.Config;
 @Config(sdk = 28)
 
 @RunWith(RobolectricTestRunner.class)
-public class FragmentBaseNavigatorTest extends BaseUnitTest {
+public class FragmentNavigatorTest extends BaseUnitTest {
 
     @Mock
     private BaseNavigator baseNavigator;
 
-    private TestFragmentFirst testFragment = TestFragmentFirst.newInstance();
+    private UnitTestFragment testFragment = UnitTestFragment.newInstance();
 
-    private TestActivity activity;
+    private UnitTestActivity activity;
 
     @Before
     public void setUp() throws Exception{
 
         MockitoAnnotations.initMocks(this);
-        activity = (TestActivity) startFragment(testFragment);
+        activity = (UnitTestActivity) startFragment(testFragment);
 
         baseNavigator = new BaseNavigator(activity);
     }
@@ -45,32 +43,32 @@ public class FragmentBaseNavigatorTest extends BaseUnitTest {
     @Test
     public void addFragmentTest(){
 
-        baseNavigator.openFragment(TestFragmentFirst.newInstance(), BaseNavigator.Transaction.ADD, true);
+        baseNavigator.openFragment(UnitTestFragment.newInstance(), BaseNavigator.Transaction.ADD, true);
 
-        TestCase.assertEquals(TestFragmentFirst.TAG, getLastFragmentName(testFragment));
+        TestCase.assertEquals(UnitTestFragment.TAG, getLastFragmentName(testFragment));
     }
 
     @Test
     public void replaceFragmentTest(){
 
-        baseNavigator.openFragment(TestFragmentFirst.newInstance(), BaseNavigator.Transaction.REPLACE, true);
+        baseNavigator.openFragment(UnitTestFragment.newInstance(), BaseNavigator.Transaction.REPLACE, true);
 
-        TestCase.assertEquals(TestFragmentFirst.TAG, getLastFragmentName(testFragment));
+        TestCase.assertEquals(UnitTestFragment.TAG, getLastFragmentName(testFragment));
     }
 
     @Test
     public void popBackStackFragmentTest(){
 
-        baseNavigator.openFragment(TestFragmentFirst.newInstance(), BaseNavigator.Transaction.REPLACE,  true);
+        baseNavigator.openFragment(UnitTestFragment.newInstance(), BaseNavigator.Transaction.REPLACE,  true);
         baseNavigator.popBackStack();
 
-        TestCase.assertEquals(TestFragmentFirst.TAG, activity.getSupportFragmentManager().getFragments().get(0).getClass().getSimpleName());
+        TestCase.assertEquals(UnitTestFragment.TAG, activity.getSupportFragmentManager().getFragments().get(0).getClass().getSimpleName());
     }
 
     @Test
     public void popBackStackImmediateFragmentTest(){
 
-        baseNavigator.openFragment(TestFragmentFirst.newInstance(), BaseNavigator.Transaction.REPLACE, true);
+        baseNavigator.openFragment(UnitTestFragment.newInstance(), BaseNavigator.Transaction.REPLACE, true);
         baseNavigator.popBackStackImmediate();
 
         TestCase.assertEquals(activity.getSupportFragmentManager().getBackStackEntryCount(), 0);
