@@ -1,6 +1,7 @@
 package com.melikeey.ui.search;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
@@ -116,8 +117,12 @@ public class SearchAdapter extends RecyclerView.Adapter<BaseViewHolder> implemen
 
             Picasso.get().load(searchResponseList.get(position).getArtist().getPicture_medium()).into(mBinding.ivArtist);
 
-            mBinding.getRoot().setOnClickListener(view ->
-                    searchFragment.mPresenter.openFragment(AlbumFragment.newInstance(searchResponseList.get(position).getArtist()), BaseNavigator.Transaction.REPLACE, true));
+            mBinding.getRoot().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    searchFragment.mPresenter.openFragment(AlbumFragment.newInstance(searchResponseList.get(position).getArtist()), BaseNavigator.Transaction.REPLACE, true);
+                }
+            });
         }
     }
 }

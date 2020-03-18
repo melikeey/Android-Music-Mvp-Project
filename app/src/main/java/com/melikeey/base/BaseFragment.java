@@ -100,9 +100,12 @@ public abstract class BaseFragment extends Fragment implements MvpView, ToolbarL
 
     protected abstract void setUp(View view);
 
-    private View.OnClickListener navigationIconListener = v -> {
+    private View.OnClickListener navigationIconListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
 
-        getBaseActivity().onBackPressed();
+            BaseFragment.this.getBaseActivity().onBackPressed();
+        }
     };
 
     @Override

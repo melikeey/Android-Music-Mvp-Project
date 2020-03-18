@@ -41,23 +41,16 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    //android X
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
-
-    //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
-    //test
+
     testImplementation "junit:junit:$rootProject.junitVersion"
     testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
     testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
-
-    //gson
-    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
-
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
 }
 
 repositories {
