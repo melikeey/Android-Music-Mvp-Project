@@ -67,6 +67,7 @@ public class AlbumFragment extends BaseFragment implements AlbumMvpView {
     @Override
     public void setAlbumList(List<Data> data) {
 
+
         albumAdapter.addAlbum(data, mArtist.getName());
 
         albumAdapter.setFragment(this);
@@ -82,5 +83,10 @@ public class AlbumFragment extends BaseFragment implements AlbumMvpView {
         super.onResume();
 
         prepareToolbar(NavigationIcon.BACK, getResources().getString(R.string.album));
+    }
+
+    @Override
+    public void showEmptyWarning() {
+            mBinding.tvTips.setText(getResources().getString(R.string.there_is_no_album));
     }
 }

@@ -22,6 +22,11 @@ class AlbumPresenter<V : AlbumMvpView?>
             } else {
                 mvpView!!.showMessage("Error")
             }
+
+            if(albumList.size < 1){
+                mvpView!!.showEmptyWarning()
+            }
+
         }) { throwable: Throwable? ->
             if (throwable != null) {
                 if (!mvpView!!.isNetworkConnected()) {

@@ -18,6 +18,7 @@ class SearchPresenter<V : SearchMvpView?>
 
     override fun getSearchResult(searchQuery: String?) {
         compositeDisposable.add(apiService.getSearch(searchQuery).subscribeOn(schedulerProvider.io()).observeOn(schedulerProvider.ui()).subscribe({ data: GetSearchResponse? ->
+
             if (data != null) {
                 searchList = data.data as MutableList<Data>
                 mvpView!!.setSearchResponse(searchList)

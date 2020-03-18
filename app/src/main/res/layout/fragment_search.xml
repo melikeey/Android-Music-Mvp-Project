@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_10"
             android:background="#fff"
-
             android:elevation="2dp"
             android:layoutDirection="rtl"
             app:closeIcon="@drawable/ic_close_black_24dp"
@@ -39,6 +38,7 @@
             android:layout_width="wrap_content"
             android:text="@string/search_a_music"
             android:id="@+id/tv_tips"
+            android:visibility="gone"
             android:textColor="@color/white"
             android:layout_centerInParent="true"
             android:layout_height="wrap_content" />

@@ -7,10 +7,17 @@
             type="com.melikeey.ui.album.AlbumFragment" />
     </data>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:background="#161616"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background_black">
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_my_trips"
@@ -20,5 +27,5 @@
             android:clipToPadding="false"
             android:paddingTop="@dimen/dp_8"
             android:paddingBottom="@dimen/dp_8" />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
 </layout>

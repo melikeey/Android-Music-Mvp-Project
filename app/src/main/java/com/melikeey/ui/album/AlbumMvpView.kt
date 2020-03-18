@@ -5,4 +5,5 @@ import com.melikeey.model.Data
 
 interface AlbumMvpView : MvpView {
     fun setAlbumList(albumList: List<Data?>?)
+    fun showEmptyWarning();
 }
